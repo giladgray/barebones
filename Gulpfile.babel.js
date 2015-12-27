@@ -40,4 +40,9 @@ gulp.task("serve", ["jade", "sass"], () => {
   gulp.watch(`${config.dest}/*.html`).on("change", browserSync.reload);
 });
 
+gulp.task("deploy", () => (
+  gulp.src(`${config.dest}/*.*`)
+    .pipe(plugins.ghPages())
+));
+
 gulp.task("default", ["serve"]);
