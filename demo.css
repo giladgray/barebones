@@ -1,0 +1,32 @@
+body {
+  max-width: 720px;
+  padding: 10px;
+  margin: auto; }
+
+section > * {
+  margin-top: 10px; }
+
+.demo-title {
+  text-align: center;
+  margin: 5em 0; }
+  .demo-title h1 {
+    font-size: 3em;
+    color: #828b91; }
+
+.section-title {
+  margin-top: 40px;
+  padding: 10px 0;
+  border-top: 4px solid #f3f2f7;
+  border-bottom: 2px solid #f3f2f7;
+  color: #828b91; }
+
+section {
+  padding: 0 20px; }
+
+table {
+  width: 100%; }
+  table td {
+    padding: 10px 0;
+    vertical-align: top; }
+    table td > * {
+      margin-bottom: 10px; }

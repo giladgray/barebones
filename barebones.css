@@ -1,0 +1,239 @@
+h1 {
+  margin: 0; }
+
+h2 {
+  margin: 0; }
+
+h3 {
+  margin: 0; }
+
+h4 {
+  margin: 0; }
+
+h5 {
+  margin: 0; }
+
+h6 {
+  margin: 0; }
+
+button,
+.button,
+input[type="button"] {
+  background: -webkit-linear-gradient(top, #f3f2f7, #e4e2ed);
+  background: linear-gradient(to bottom, #f3f2f7, #e4e2ed);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 9px 15px 7px;
+  color: #393e41;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  color: #393e41;
+  font-size: 1em;
+  line-height: 1.2; }
+  button:disabled, button.disabled,
+  .button:disabled,
+  .button.disabled,
+  input[type="button"]:disabled,
+  input[type="button"].disabled {
+    background: #dcd9e7;
+    box-shadow: none;
+    color: rgba(57, 62, 65, 0.5); }
+  button:hover:not(:disabled), button.hover,
+  .button:hover:not(:disabled),
+  .button.hover,
+  input[type="button"]:hover:not(:disabled),
+  input[type="button"].hover {
+    background: -webkit-linear-gradient(top, #eae9f1, #dcd9e7);
+    background: linear-gradient(to bottom, #eae9f1, #dcd9e7); }
+  button:active:not(:disabled), button.active,
+  .button:active:not(:disabled),
+  .button.active,
+  input[type="button"]:active:not(:disabled),
+  input[type="button"].active {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    background: -webkit-linear-gradient(top, #d6d2e4, #c7c3da);
+    background: linear-gradient(to bottom, #d6d2e4, #c7c3da); }
+  button:disabled, button.disabled,
+  .button:disabled,
+  .button.disabled,
+  input[type="button"]:disabled,
+  input[type="button"].disabled {
+    cursor: not-allowed;
+    color: rgba(57, 62, 65, 0.4); }
+  button.block,
+  .button.block,
+  input[type="button"].block {
+    display: block; }
+  button.large,
+  .button.large,
+  input[type="button"].large {
+    font-size: 18px; }
+  button.primary,
+  .button.primary,
+  input[type="button"].primary {
+    background: -webkit-linear-gradient(top, #3f88c5, #367bb4);
+    background: linear-gradient(to bottom, #3f88c5, #367bb4);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 9px 15px 7px;
+    color: white; }
+    button.primary:disabled, button.primary.disabled,
+    .button.primary:disabled,
+    .button.primary.disabled,
+    input[type="button"].primary:disabled,
+    input[type="button"].primary.disabled {
+      background: #3373a8;
+      box-shadow: none;
+      color: rgba(255, 255, 255, 0.5); }
+    button.primary:hover:not(:disabled), button.primary.hover,
+    .button.primary:hover:not(:disabled),
+    .button.primary.hover,
+    input[type="button"].primary:hover:not(:disabled),
+    input[type="button"].primary.hover {
+      background: -webkit-linear-gradient(top, #3980bc, #3373a8);
+      background: linear-gradient(to bottom, #3980bc, #3373a8); }
+    button.primary:active:not(:disabled), button.primary.active,
+    .button.primary:active:not(:disabled),
+    .button.primary.active,
+    input[type="button"].primary:active:not(:disabled),
+    input[type="button"].primary.active {
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      background: -webkit-linear-gradient(top, #306ea1, #2b608d);
+      background: linear-gradient(to bottom, #306ea1, #2b608d); }
+  button.secondary,
+  .button.secondary,
+  input[type="button"].secondary {
+    background: -webkit-linear-gradient(top, #44bba4, #3da894);
+    background: linear-gradient(to bottom, #44bba4, #3da894);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 9px 15px 7px;
+    color: white; }
+    button.secondary:disabled, button.secondary.disabled,
+    .button.secondary:disabled,
+    .button.secondary.disabled,
+    input[type="button"].secondary:disabled,
+    input[type="button"].secondary.disabled {
+      background: #399d8a;
+      box-shadow: none;
+      color: rgba(255, 255, 255, 0.5); }
+    button.secondary:hover:not(:disabled), button.secondary.hover,
+    .button.secondary:hover:not(:disabled),
+    .button.secondary.hover,
+    input[type="button"].secondary:hover:not(:disabled),
+    input[type="button"].secondary.hover {
+      background: -webkit-linear-gradient(top, #40b09a, #399d8a);
+      background: linear-gradient(to bottom, #40b09a, #399d8a); }
+    button.secondary:active:not(:disabled), button.secondary.active,
+    .button.secondary:active:not(:disabled),
+    .button.secondary.active,
+    input[type="button"].secondary:active:not(:disabled),
+    input[type="button"].secondary.active {
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      background: -webkit-linear-gradient(top, #369683, #308373);
+      background: linear-gradient(to bottom, #369683, #308373); }
+  button.danger,
+  .button.danger,
+  input[type="button"].danger {
+    background: -webkit-linear-gradient(top, #e94f37, #e63b20);
+    background: linear-gradient(to bottom, #e94f37, #e63b20);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 9px 15px 7px;
+    color: white; }
+    button.danger:disabled, button.danger.disabled,
+    .button.danger:disabled,
+    .button.danger.disabled,
+    input[type="button"].danger:disabled,
+    input[type="button"].danger.disabled {
+      background: #df3318;
+      box-shadow: none;
+      color: rgba(255, 255, 255, 0.5); }
+    button.danger:hover:not(:disabled), button.danger.hover,
+    .button.danger:hover:not(:disabled),
+    .button.danger.hover,
+    input[type="button"].danger:hover:not(:disabled),
+    input[type="button"].danger.hover {
+      background: -webkit-linear-gradient(top, #e74329, #df3318);
+      background: linear-gradient(to bottom, #e74329, #df3318); }
+    button.danger:active:not(:disabled), button.danger.active,
+    .button.danger:active:not(:disabled),
+    .button.danger.active,
+    input[type="button"].danger:active:not(:disabled),
+    input[type="button"].danger.active {
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      background: -webkit-linear-gradient(top, #d63117, #bf2c15);
+      background: linear-gradient(to bottom, #d63117, #bf2c15); }
+
+menu {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  padding: 0; }
+  menu button {
+    border-radius: 0; }
+  menu:not(.vertical) button:first-child {
+    border-radius: 4px 0 0 4px; }
+  menu:not(.vertical) button:last-child {
+    border-radius: 0 4px 4px 0; }
+  menu:not(.vertical) button + button {
+    margin-left: -1px; }
+  menu.vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    menu.vertical button:first-child {
+      border-radius: 4px 4px 0 0; }
+    menu.vertical button:last-child {
+      border-radius: 0 0 4px 4px; }
+    menu.vertical button + button {
+      margin-top: -1px; }
+  menu.block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+input[type="text"],
+input[type="search"],
+textarea {
+  display: block;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 0.5em 1em;
+  color: #393e41;
+  font-size: 1em; }
+  input[type="text"]:disabled, input[type="text"].disabled,
+  input[type="search"]:disabled,
+  input[type="search"].disabled,
+  textarea:disabled,
+  textarea.disabled {
+    cursor: not-allowed;
+    color: rgba(57, 62, 65, 0.4);
+    background: #e4e2ed;
+    box-shadow: none; }
+  input[type="text"].large,
+  input[type="search"].large,
+  textarea.large {
+    font-size: 18px; }
+  input[type="text"].error,
+  input[type="search"].error,
+  textarea.error {
+    box-shadow: inset 0 0 0 1px rgba(233, 79, 55, 0.5), inset 0 1px 2px rgba(233, 79, 55, 0.3);
+    color: #e94f37; }
+
+body {
+  margin: 0;
+  font-size: 14px;
+  color: #393e41; }
