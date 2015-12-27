@@ -12,3 +12,10 @@ $headers: (
     margin: 0;
   }
 }
+
+body {
+  margin: 0;
+  font-size: $base-font-size;
+  background-color: $body-color;
+  color: $text-color;
+}
