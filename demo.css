@@ -13,6 +13,21 @@ section > * {
     font-size: 3em;
     color: #828b91; }
 
+.demo-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .demo-links li {
+    padding: 0 10px; }
+
 .section-title {
   margin-top: 40px;
   padding: 10px 0;
@@ -28,5 +43,48 @@ table {
   table td {
     padding: 10px 0;
     vertical-align: top; }
-    table td > * {
+
+dl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  border-top: 1px solid #f3f2f7;
+  padding-top: 10px; }
+  dl dt {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  dl dd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 80%;
+        -ms-flex: 1 1 80%;
+            flex: 1 1 80%;
+    margin: 0; }
+    dl dd > *:not(:last-child) {
       margin-bottom: 10px; }
+  dl dt,
+  dl dd {
+    border-bottom: 1px solid #f3f2f7;
+    padding-bottom: 10px;
+    margin-bottom: 10px; }
+  dl code {
+    display: inline-block;
+    background: #f3f2f7;
+    padding: 3px 5px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2); }
+    dl code:empty {
+      display: none; }

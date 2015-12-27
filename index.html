@@ -10,7 +10,15 @@
       <h1>barebones</h1>
       <h4>a nearly naked CSS framework</h4>
     </div>
-    <h2 class="section-title">Typography</h2>
+    <ul class="demo-links">
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#button-groups">Button Groups</a></li>
+      <li><a href="#text-inputs">Text Inputs</a></li>
+      <li>|</li>
+      <li><a href="https://github.com/giladgray/barebones">GitHub</a></li>
+    </ul>
+    <h2 id="typography" class="section-title">Typography</h2>
     <section>
       <pre>&lt;h[1-6]&gt;</pre>
       <h1>Header 1</h1>
@@ -26,128 +34,100 @@
         <li>Explicabo, reiciendis, nemo.</li>
       </ul>
     </section>
-    <h2 class="section-title">Buttons</h2>
+    <h2 id="buttons" class="section-title">Buttons</h2>
     <section>
       <pre>&lt;button [disabled] "[large] [primary|secondary|danger|link]"&gt;Text&lt;/button&gt;</pre>
-      <table>
-        <tr>
-          <td><code></code></td>
-          <td>
-            <button>Click me!</button>
-          </td>
-        </tr>
-        <tr>
-          <td><code>disabled</code></td>
-          <td>
-            <button class="disabled">Click me!</button>
-          </td>
-        </tr>
-        <tr>
-          <td><code>large</code></td>
-          <td>
-            <button class="large">Click me!</button>
-          </td>
-        </tr>
-        <tr>
-          <td><code>primary</code></td>
-          <td>
-            <button class="primary">Click me!</button>
-          </td>
-        </tr>
-        <tr>
-          <td><code>secondary</code></td>
-          <td>
-            <button class="secondary">Click me!</button>
-          </td>
-        </tr>
-        <tr>
-          <td><code>danger</code></td>
-          <td>
-            <button class="danger">Click me!</button>
-          </td>
-        </tr>
-        <tr>
-          <td><code>link</code></td>
-          <td>
-            <button class="link">Click me!</button>
-          </td>
-        </tr>
-      </table>
+      <dl>
+        <dt><code></code></dt>
+        <dd>
+          <button>Click me!</button>
+        </dd>
+        <dt><code>disabled</code></dt>
+        <dd>
+          <button class="disabled">Click me!</button>
+        </dd>
+        <dt><code>large</code></dt>
+        <dd>
+          <button class="large">Click me!</button>
+        </dd>
+        <dt><code>primary</code></dt>
+        <dd>
+          <button class="primary">Click me!</button>
+        </dd>
+        <dt><code>secondary</code></dt>
+        <dd>
+          <button class="secondary">Click me!</button>
+        </dd>
+        <dt><code>danger</code></dt>
+        <dd>
+          <button class="danger">Click me!</button>
+        </dd>
+        <dt><code>link</code></dt>
+        <dd>
+          <button class="link">Click me!</button>
+        </dd>
+      </dl>
     </section>
-    <h2 class="section-title">Button Groups</h2>
+    <h2 id="button-groups" class="section-title">Button Groups</h2>
     <section>
-      <table>
-        <tr>
-          <td><code></code></td>
-          <td>
-            <menu>
-              <button>One Fish</button>
-              <button>Two Fish</button>
-              <button>Red Fish</button>
-              <button>Blue Fish</button>
-            </menu>
-          </td>
-        </tr>
-        <tr>
-          <td><code>vertical</code></td>
-          <td>
-            <menu class="vertical">
-              <button>One Fish</button>
-              <button>Two Fish</button>
-              <button>Red Fish</button>
-              <button>Blue Fish</button>
-            </menu>
-          </td>
-        </tr>
-        <tr>
-          <td><code>block</code></td>
-          <td>
-            <menu class="block">
-              <button>One Fish</button>
-              <button>Two Fish</button>
-              <button>Red Fish</button>
-              <button>Blue Fish</button>
-            </menu>
-          </td>
-        </tr>
-      </table>
+      <dl>
+        <dt><code></code></dt>
+        <dd>
+          <menu>
+            <button>One Fish</button>
+            <button>Two Fish</button>
+            <button>Red Fish</button>
+            <button>Blue Fish</button>
+          </menu>
+        </dd>
+        <dt><code>vertical</code></dt>
+        <dd>
+          <menu class="vertical">
+            <button>One Fish</button>
+            <button>Two Fish</button>
+            <button>Red Fish</button>
+            <button>Blue Fish</button>
+          </menu>
+        </dd>
+        <dt><code>block</code></dt>
+        <dd>
+          <menu class="block">
+            <button>One Fish</button>
+            <button>Two Fish</button>
+            <button>Red Fish</button>
+            <button>Blue Fish</button>
+          </menu>
+        </dd>
+      </dl>
     </section>
-    <h2 class="section-title">Text Inputs</h2>
+    <h2 id="text-inputs" class="section-title">Text Inputs</h2>
     <section>
-      <table>
-        <tr>
-          <td><code></code></td>
-          <td>
-            <input type="text" value="Words words words"/>
-            <input type="search" placeholder="Search..."/>
-            <textarea>Text area</textarea>
-          </td>
-        </tr>
-        <tr>
-          <td><code>disabled</code></td>
-          <td>
-            <input type="text" value="Words words words" class="disabled"/>
-            <input type="search" placeholder="Search..." class="disabled"/>
-            <textarea class="disabled">Text area</textarea>
-          </td>
-        </tr>
-        <tr>
-          <td><code>large</code></td>
-          <td>
-            <input type="text" value="Words words words" class="large"/>
-            <input type="search" placeholder="Search..." class="large"/>
-            <textarea class="large">Text area</textarea>
-          </td>
-        </tr>
-        <tr>
-          <td><code>error</code></td>
-          <td>
-            <input type="text" value="Words words words" class="error"/>
-            <input type="search" placeholder="Search..." class="error"/>
-            <textarea class="error">Text area</textarea>
-          </td>
-        </tr>
-      </table>
+      <dl>
+        <dt><code></code></dt>
+        <dd>
+          <input type="text" value="Words words words"/>
+          <input type="search" placeholder="Search..."/>
+          <textarea>Text area</textarea>
+        </dd>
+        <dt><code>disabled</code></dt>
+        <dd>
+          <input type="text" value="Words words words" class="disabled"/>
+          <input type="search" placeholder="Search..." class="disabled"/>
+          <textarea class="disabled">Text area</textarea>
+        </dd>
+        <dt><code>large</code></dt>
+        <dd>
+          <input type="text" value="Words words words" class="large"/>
+          <input type="search" placeholder="Search..." class="large"/>
+          <textarea class="large">Text area</textarea>
+        </dd>
+        <dt><code>error</code></dt>
+        <dd>
+          <input type="text" value="Words words words" class="error"/>
+          <input type="search" placeholder="Search..." class="error"/>
+          <textarea class="error">Text area</textarea>
+        </dd>
+      </dl>
     </section>
   </body>
 </html>
