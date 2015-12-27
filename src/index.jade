@@ -1,10 +1,30 @@
+mixin modifier-table(modifiers)
+  table
+    tbody
+      each mod in modifiers
+        tr
+          td: code= mod
+          td: block
+
 html
   head
     title Barebones
     link(rel="stylesheet", href="barebones.css")
     link(rel="stylesheet", href="demo.css")
   body
+    .demo-title
+      h1 barebones
+      h4 a nearly naked CSS framework
+    ul.demo-links
+      li: a(href="#typography") Typography
+      li: a(href="#buttons") Buttons
+      li: a(href="#button-groups") Button Groups
+      li: a(href="#text-inputs") Text Inputs
+      li |
+      li: a(href="https://github.com/giladgray/barebones") GitHub
+    h2#typography.section-title Typography
     section
+      pre &lt;h[1-6]&gt;
       h1 Header 1
       h2 Header 2
       h3 Header 3
@@ -19,38 +39,33 @@ html
         li Cum, tempore, quis.
         li Explicabo, reiciendis, nemo.
   
+    h2#buttons.section-title Buttons
     section
-      button Click me!
-      button(disabled) Don't click me!
+      pre &lt;button [disabled] "[large] [primary|secondary|danger|link]"&gt;Text&lt;/button&gt;
       
-      button.large Large
-      button.primary Primary
-      button.secondary Secondary
-      button.danger Danger
-      button.link Link
+      dl
+        each mod in ['', 'disabled', 'large', 'primary', 'secondary', 'danger', 'link']
+          dt: code= mod
+          dd: button(class=mod) Click me!
     
+    h2#button-groups.section-title Button Groups
     section
-      menu
-        button One Fish
-        button Two Fish
-        button Red Fish
-        button Blue Fish
+      dl
+        each mod in ['', 'vertical', 'block']
+          dt: code= mod
+          dd
+            menu(class=mod)
+              button One Fish
+              button Two Fish
+              button Red Fish
+              button Blue Fish
       
-      menu.vertical
-        button One Fish
-        button Two Fish
-        button Red Fish
-        button Blue Fish
-      
+    h2#text-inputs.section-title Text Inputs
     section
-      input(type="text", placeholder="Text input")
-      input(type="text", value="Words words words")
-      input(type="text", value="No words for you", disabled)
-      input.large(type="text", value="Large words")
-      input.error(type="text", value="Error words")
-      
-      input(type="search", placeholder="Search...")
-      
-      textarea Text area
-      textarea.large Large text area
-      textarea(disabled) No typey
+      dl
+        each mod in ['', 'disabled', 'large', 'error']
+          dt: code= mod
+          dd
+            input(class=mod, type="text", value="Words words words")
+            input(class=mod, type="search", placeholder="Search...")
+            textarea(class=mod) Text area
