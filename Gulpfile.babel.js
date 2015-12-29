@@ -30,13 +30,20 @@ gulp.task("jade", () => (
     .pipe(plugins.count("jade: <%= files %> compiled"))
 ));
 
-gulp.task("serve", ["jade", "sass"], () => {
+gulp.task("js", () => (
+  gulp.src(`${config.src}/*.js`)
+    .pipe(gulp.dest(config.dest))
+    .pipe(plugins.count("js: <%= files %> copied"))
+));
+
+gulp.task("serve", ["js", "jade", "sass"], () => {
   browserSync.init({
     server: `./${config.dest}`,
   });
 
   gulp.watch(`${config.src}/*.scss`, ["sass"]);
   gulp.watch(`${config.src}/*.jade`, ["jade"]);
+  gulp.watch(`${config.src}/*.js`, ["js"]);
   gulp.watch(`${config.dest}/*.html`).on("change", browserSync.reload);
 });
 

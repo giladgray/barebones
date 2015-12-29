@@ -4,12 +4,12 @@ $header-color: lighten($text-color, 30%);
 
 body {
   max-width: 720px;
-  padding: 10px;
+  padding: $g;
   margin: auto;
 }
 
 section > * {
-  margin-top: 10px;
+  margin-top: $g;
 }
 
 .demo-title {
@@ -20,9 +20,12 @@ section > * {
     font-size: 3em;
     color: $header-color;
   }
+}
 
-  h4 {
-  }
+.github-link {
+  position: absolute;
+  top: $g * 2;
+  right: $g * 2;
 }
 
 .demo-links {
@@ -34,37 +37,27 @@ section > * {
   list-style: none;
 
   li {
-    padding: 0 10px;
+    padding: 0 $g;
   }
 }
 
 .section-title {
-  margin-top: 40px;
-  padding: 10px 0;
+  margin-top: ($g * 4);
+  padding: $g 0;
   border-top: 4px solid $body-color;
   border-bottom: 2px solid $body-color;
   color: $header-color;
 }
 
 section {
-  padding: 0 20px;
-}
-
-table {
-  width: 100%;
-
-  td {
-    padding: 10px 0;
-    vertical-align: top;
-
-  }
+  padding: 0 ($g * 2);
 }
 
 dl {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid $body-color;
-  padding-top: 10px;
+  padding-top: $g;
 
   dt {
     flex: 0 0 20%;
@@ -85,8 +78,8 @@ dl {
   dt,
   dd {
     border-bottom: 1px solid $body-color;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    padding-bottom: $g;
+    margin-bottom: $g;
   }
 
   code {
