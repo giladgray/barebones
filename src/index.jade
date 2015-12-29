@@ -24,7 +24,9 @@ html
       li: a(href="https://github.com/giladgray/barebones") GitHub
     h2#typography.section-title Typography
     section
-      pre &lt;h[1-6]&gt;
+      pre.
+        &lt;h[1-6]>Text&lt;/h[1-6]>;
+        &lt;p>Paragraph text&lt;/p>
       h1 Header 1
       h2 Header 2
       h3 Header 3
@@ -33,11 +35,23 @@ html
       h6 Header 6
       
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, tempore quia accusamus assumenda illo?
+        
+    h2#lists.section-title Lists
+    section
+      pre.
+        &lt;[ul|ol] class="[cozy] [inline] [unstyled]">
+          &lt;li>List item&lt;/li>
+          ...
+        &lt;/[ul|ol]>
       
-      ul
-        li Lorem ipsum dolor.
-        li Cum, tempore, quis.
-        li Explicabo, reiciendis, nemo.
+      dl
+        each mod in ['', 'cozy', 'inline', 'unstyled']
+          dt: code= mod
+          dd
+            ul(class=mod)
+              li Lorem ipsum.
+              li Esse, ducimus?
+              li Vero, doloremque.
   
     h2#buttons.section-title Buttons
     section

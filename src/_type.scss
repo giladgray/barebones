@@ -1,0 +1,50 @@
+@import "variables";
+
+$headers: (
+  h1: (),
+  h2: (),
+  h3: (),
+  h4: (),
+  h5: (),
+  h6: ()
+);
+
+@each $header in $headers {
+  #{$header} {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+p {
+  margin-bottom: $g;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+ul,
+ol {
+  &.cozy li + li {
+     margin-top: $g;
+  }
+
+  &.unstyled,
+  &.inline {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &.inline {
+    li {
+      display: inline-block;
+
+      + li { margin-left: $g; }
+    }
+
+    &.cozy li + li {
+      margin-left: $g * 2;
+      margin-top: 0;
+    }
+  }
+}
