@@ -6,78 +6,117 @@
     <link rel="stylesheet" href="demo.css"/>
   </head>
   <body>
-    <div class="demo-title">
+    <div class="demo-title"><a href="https://github.com/giladgray/barebones" target="_blank" class="github-link">GitHub</a>
       <h1>barebones</h1>
       <h4>a nearly naked CSS framework</h4>
     </div>
-    <ul class="demo-links">
-      <li><a href="#typography">Typography</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#button-groups">Button Groups</a></li>
-      <li><a href="#text-inputs">Text Inputs</a></li>
-      <li>|</li>
-      <li><a href="https://github.com/giladgray/barebones">GitHub</a></li>
-    </ul>
+    <ul class="demo-links"></ul>
     <h2 id="typography" class="section-title">Typography</h2>
     <section>
-      <pre>&lt;h[1-6]&gt;</pre>
+      <pre>&lt;h[1-6]>Text&lt;/h[1-6]>;
+&lt;p>Paragraph text&lt;/p></pre>
       <h1>Header 1</h1>
       <h2>Header 2</h2>
       <h3>Header 3</h3>
       <h4>Header 4</h4>
       <h5>Header 5</h5>
       <h6>Header 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, tempore quia accusamus assumenda illo?</p>
-      <ul>
-        <li>Lorem ipsum dolor.</li>
-        <li>Cum, tempore, quis.</li>
-        <li>Explicabo, reiciendis, nemo.</li>
-      </ul>
+      <p>
+         
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, tempore quia accusamus <a href="#">assumenda illo?</a>
+      </p>
     </section>
-    <h2 id="buttons" class="section-title">Buttons</h2>
+    <h2 id="lists" class="section-title">Lists</h2>
     <section>
-      <pre>&lt;button [disabled] "[large] [primary|secondary|danger|link]"&gt;Text&lt;/button&gt;</pre>
+      <pre>&lt;[ul|ol] class="[cozy] [inline] [unstyled]">
+  &lt;li>List item&lt;/li>
+  ...
+&lt;/[ul|ol]>
+</pre>
       <dl>
         <dt><code></code></dt>
         <dd>
-          <button>Click me!</button>
+          <ul>
+            <li>Lorem ipsum.</li>
+            <li>Esse, ducimus?</li>
+            <li>Vero, doloremque.</li>
+          </ul>
+        </dd>
+        <dt><code>cozy</code></dt>
+        <dd>
+          <ul class="cozy">
+            <li>Lorem ipsum.</li>
+            <li>Esse, ducimus?</li>
+            <li>Vero, doloremque.</li>
+          </ul>
+        </dd>
+        <dt><code>inline</code></dt>
+        <dd>
+          <ul class="inline">
+            <li>Lorem ipsum.</li>
+            <li>Esse, ducimus?</li>
+            <li>Vero, doloremque.</li>
+          </ul>
+        </dd>
+        <dt><code>unstyled</code></dt>
+        <dd>
+          <ul class="unstyled">
+            <li>Lorem ipsum.</li>
+            <li>Esse, ducimus?</li>
+            <li>Vero, doloremque.</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+    <h2 id="buttons" class="section-title">Buttons</h2>
+    <section>
+      <pre>&lt;button [disabled] "[large] [primary|secondary|danger|link]">Text&lt;/button>
+&lt;a [disabled] "button [large] [primary|secondary|danger|link]">Text&lt;/a>
+</pre>
+      <dl class="horizontal">
+        <dt><code></code></dt>
+        <dd>
+          <button>Click me!</button><a class="button">Click me!</a>
         </dd>
         <dt><code>disabled</code></dt>
         <dd>
-          <button class="disabled">Click me!</button>
+          <button disabled="disabled" class="disabled">Click me!</button><a disabled="disabled" class="button disabled">Click me!</a>
         </dd>
         <dt><code>large</code></dt>
         <dd>
-          <button class="large">Click me!</button>
+          <button class="large">Click me!</button><a class="button large">Click me!</a>
         </dd>
         <dt><code>primary</code></dt>
         <dd>
-          <button class="primary">Click me!</button>
+          <button class="primary">Click me!</button><a class="button primary">Click me!</a>
         </dd>
         <dt><code>secondary</code></dt>
         <dd>
-          <button class="secondary">Click me!</button>
+          <button class="secondary">Click me!</button><a class="button secondary">Click me!</a>
         </dd>
         <dt><code>danger</code></dt>
         <dd>
-          <button class="danger">Click me!</button>
+          <button class="danger">Click me!</button><a class="button danger">Click me!</a>
         </dd>
         <dt><code>link</code></dt>
         <dd>
-          <button class="link">Click me!</button>
+          <button class="link">Click me!</button><a class="link">Click me!</a>
         </dd>
       </dl>
     </section>
     <h2 id="button-groups" class="section-title">Button Groups</h2>
     <section>
+      <pre>&lt;menu class="[vertical] [block]"&gt;
+  &lt;[button|a] ...>&lt;/[button|a]>
+  ...
+&lt;/menu></pre>
       <dl>
         <dt><code></code></dt>
         <dd>
           <menu>
             <button>One Fish</button>
             <button>Two Fish</button>
-            <button>Red Fish</button>
-            <button>Blue Fish</button>
+            <button>Red Fish</button><a class="button">Link Fish</a>
           </menu>
         </dd>
         <dt><code>vertical</code></dt>
@@ -85,8 +124,7 @@
           <menu class="vertical">
             <button>One Fish</button>
             <button>Two Fish</button>
-            <button>Red Fish</button>
-            <button>Blue Fish</button>
+            <button>Red Fish</button><a class="button">Link Fish</a>
           </menu>
         </dd>
         <dt><code>block</code></dt>
@@ -94,15 +132,17 @@
           <menu class="block">
             <button>One Fish</button>
             <button>Two Fish</button>
-            <button>Red Fish</button>
-            <button>Blue Fish</button>
+            <button>Red Fish</button><a class="button">Link Fish</a>
           </menu>
         </dd>
       </dl>
     </section>
     <h2 id="text-inputs" class="section-title">Text Inputs</h2>
     <section>
-      <dl>
+      <pre>&lt;input type="text" class="[large] [error]" [disabled]&gt;
+&lt;input type="search" class="[large] [error]" [disabled]&gt;
+&lt;textarea class="[large] [error]" [disabled]>&lt;/textarea></pre>
+      <dl class="vertical">
         <dt><code></code></dt>
         <dd>
           <input type="text" value="Words words words"/>
@@ -111,9 +151,9 @@
         </dd>
         <dt><code>disabled</code></dt>
         <dd>
-          <input type="text" value="Words words words" class="disabled"/>
-          <input type="search" placeholder="Search..." class="disabled"/>
-          <textarea class="disabled">Text area</textarea>
+          <input type="text" value="Words words words" disabled="disabled" class="disabled"/>
+          <input type="search" placeholder="Search..." disabled="disabled" class="disabled"/>
+          <textarea disabled="disabled" class="disabled">Text area</textarea>
         </dd>
         <dt><code>large</code></dt>
         <dd>
@@ -129,5 +169,6 @@
         </dd>
       </dl>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>
