@@ -1,9 +1,6 @@
 import gulp from "gulp";
-
 const browserSync = require("browser-sync").create();
-
 const plugins = require("gulp-load-plugins")({
-  DEBUG: true,
   scope: ["devDependencies"],
 });
 
@@ -12,18 +9,10 @@ const config = {
   dest: "dist",
   port: 9000,
 };
-
-gulp.task("sass", () => (
-  gulp.src(`${config.src}/{,!_}*.scss`)
-    .pipe(plugins.sass())
-    .pipe(plugins.autoprefixer())
-    .pipe(gulp.dest(config.dest))
-    .pipe(browserSync.stream())
-    .pipe(plugins.count("sass: <%= files %> compiled"))
-));
+const srcGlob = (files) => (`${config.src}/${files}`);
 
 gulp.task("jade", () => (
-  gulp.src(`${config.src}/*.jade`)
+  gulp.src(srcGlob("*.jade"))
     .pipe(plugins.data({}))
     .pipe(plugins.jade({ pretty: true }))
     .pipe(gulp.dest(config.dest))
@@ -31,9 +20,18 @@ gulp.task("jade", () => (
 ));
 
 gulp.task("js", () => (
-  gulp.src(`${config.src}/*.js`)
+  gulp.src(srcGlob("*.js"))
     .pipe(gulp.dest(config.dest))
     .pipe(plugins.count("js: <%= files %> copied"))
+));
+
+gulp.task("sass", () => (
+  gulp.src(srcGlob("{,!_}*.scss"))
+    .pipe(plugins.sass())
+    .pipe(plugins.autoprefixer())
+    .pipe(gulp.dest(config.dest))
+    .pipe(browserSync.stream())
+    .pipe(plugins.count("sass: <%= files %> compiled"))
 ));
 
 gulp.task("serve", ["js", "jade", "sass"], () => {
@@ -41,10 +39,10 @@ gulp.task("serve", ["js", "jade", "sass"], () => {
     server: `./${config.dest}`,
   });
 
-  gulp.watch(`${config.src}/*.scss`, ["sass"]);
-  gulp.watch(`${config.src}/*.jade`, ["jade"]);
-  gulp.watch(`${config.src}/*.js`, ["js"]);
-  gulp.watch(`${config.dest}/*.html`).on("change", browserSync.reload);
+  gulp.watch(srcGlob("*.html")).on("change", browserSync.reload);
+  gulp.watch(srcGlob("*.jade"), ["jade"]);
+  gulp.watch(srcGlob("*.js"), ["js"]);
+  gulp.watch(srcGlob("*.scss"), ["sass"]);
 });
 
 gulp.task("deploy", () => (
