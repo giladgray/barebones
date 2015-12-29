@@ -69,10 +69,6 @@ dl {
   dd {
     flex: 1 1 80%;
     margin: 0;
-
-     > *:not(:last-child) {
-       margin-bottom: 10px;
-     }
   }
 
   dt,
@@ -96,5 +92,13 @@ dl {
       //   content: "default";
       // }
     }
+  }
+
+  &.vertical dd > *:not(:last-child) {
+    margin-bottom: $g;
+  }
+
+  &.horizontal dd > *:not(:last-child) {
+    margin-right: $g;
   }
 }

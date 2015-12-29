@@ -57,7 +57,7 @@ html
         &lt;button [disabled] "[large] [primary|secondary|danger|link]">Text&lt;/button>
         &lt;a [disabled] "button [large] [primary|secondary|danger|link]">Text&lt;/a>
       
-      dl
+      dl.horizontal
         each mod in ['', 'disabled', 'large', 'primary', 'secondary', 'danger', 'link']
           dt: code= mod
           dd
@@ -87,12 +87,12 @@ html
         &lt;input type="text" class="[large] [error]" [disabled]&gt;
         &lt;input type="search" class="[large] [error]" [disabled]&gt;
         &lt;textarea class="[large] [error]" [disabled]>&lt;/textarea>
-      dl
+      dl.vertical
         each mod in ['', 'disabled', 'large', 'error']
           dt: code= mod
           dd
-            input(class=mod, disabled=(mod === "disabled"), type="text", value="Words words words")
-            input(class=mod, disabled=(mod === "disabled"), type="search", placeholder="Search...")
+            input(class=mod, type="text", value="Words words words", disabled=(mod === "disabled"))
+            input(class=mod, type="search", placeholder="Search...", disabled=(mod === "disabled"))
             textarea(class=mod, disabled=(mod === "disabled")) Text area
   
     script(src="index.js")
