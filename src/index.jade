@@ -34,7 +34,9 @@ html
       h5 Header 5
       h6 Header 6
       
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, tempore quia accusamus assumenda illo?
+      p 
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, tempore quia accusamus 
+        a(href="#") assumenda illo?
         
     h2#lists.section-title Lists
     section
@@ -55,15 +57,24 @@ html
   
     h2#buttons.section-title Buttons
     section
-      pre &lt;button [disabled] "[large] [primary|secondary|danger|link]"&gt;Text&lt;/button&gt;
+      pre.
+        &lt;button [disabled] "[large] [primary|secondary|danger|link]">Text&lt;/button>
+        &lt;a [disabled] "button [large] [primary|secondary|danger|link]">Text&lt;/a>
       
       dl
         each mod in ['', 'disabled', 'large', 'primary', 'secondary', 'danger', 'link']
           dt: code= mod
-          dd: button(class=mod) Click me!
+          dd
+            button(class=mod, disabled=(mod === "disabled")) Click me!
+            a(class={button: mod !== "link", }, class=mod disabled=(mod === "disabled")) Click me!
     
     h2#button-groups.section-title Button Groups
     section
+      pre.
+        &lt;menu class="[vertical] [block]"&gt;
+          &lt;[button|a] ...>&lt;/[button|a]>
+          ...
+        &lt;/menu>
       dl
         each mod in ['', 'vertical', 'block']
           dt: code= mod
@@ -72,14 +83,20 @@ html
               button One Fish
               button Two Fish
               button Red Fish
-              button Blue Fish
+              a(class="button") Link Fish
       
     h2#text-inputs.section-title Text Inputs
     section
+      pre.
+        &lt;input type="text" class="[large] [error]" [disabled]&gt;
+        &lt;input type="search" class="[large] [error]" [disabled]&gt;
+        &lt;textarea class="[large] [error]" [disabled]>&lt;/textarea>
       dl
         each mod in ['', 'disabled', 'large', 'error']
           dt: code= mod
           dd
-            input(class=mod, type="text", value="Words words words")
-            input(class=mod, type="search", placeholder="Search...")
-            textarea(class=mod) Text area
+            input(class=mod, disabled=(mod === "disabled"), type="text", value="Words words words")
+            input(class=mod, disabled=(mod === "disabled"), type="search", placeholder="Search...")
+            textarea(class=mod, disabled=(mod === "disabled")) Text area
+  
+    script(src="index.js")

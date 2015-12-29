@@ -21,8 +21,14 @@ textarea {
   }
 
   &.large { font-size: $large-font-size; }
+  
   &.error {
     box-shadow: inset border-shadow(0.5, $danger-color), inset drop-shadow(0.3, $danger-color);
     color: $danger-color;
   }
+}
+
+input[type="search"] {
+  border-radius: 1em;
+  padding: 0.5em;
 }
