@@ -54,11 +54,11 @@ html
     h2#buttons.section-title Buttons
     section
       pre.
-        &lt;button [disabled] "[large] [primary|secondary|danger|link]">Text&lt;/button>
-        &lt;a [disabled] "button [large] [primary|secondary|danger|link]">Text&lt;/a>
+        &lt;button [disabled] "[primary|secondary|danger|link] [round] [large] [block]">Text&lt;/button>
+        &lt;a [disabled] "button [primary|secondary|danger|link] [round] [large] [block]">Text&lt;/a>
       
       dl.horizontal
-        each mod in ['', 'disabled', 'large', 'primary', 'secondary', 'danger', 'link']
+        each mod in ['', 'disabled', 'primary', 'secondary', 'danger', 'link', 'round', 'large', 'block']
           dt: code= mod
           dd
             button(class=mod, disabled=(mod === "disabled")) Click me!

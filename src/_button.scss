@@ -46,7 +46,7 @@
   border-radius: $border-radius;
   padding: 0.5em 1em;
   color: $text-color;
-  // font-family: $fira;
+  text-align: center;
 
   &:hover {
     text-decoration: none;
@@ -58,8 +58,13 @@
     color: rgba($text-color, 0.4);
   }
 
-  &.block     { display: block; }
+  &.block     {
+    display: block;
+    width: 100%;
+  }
+
   &.large     { font-size: $large-font-size; }
+  &.round     { border-radius: 1em; }
   &.primary   { @include button($primary-color, white); }
   &.secondary { @include button($secondary-color, white); }
   &.danger    { @include button($danger-color, white); }
@@ -111,7 +116,11 @@ menu {
   }
 
   // when you need it to fill the whole width
-  &.block { display: flex; }
+  &.block {
+    display: flex;
+
+    .button { flex: 1 1 auto; }
+  }
 }
 
 button:not(.link),

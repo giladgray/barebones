@@ -6,4 +6,7 @@ body {
   margin: 0;
   font-size: $base-font-size;
   color: $text-color;
+
+  // TODO: better way of accomplishing this?
+  * { box-sizing: border-box; }
 }

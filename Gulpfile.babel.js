@@ -39,7 +39,7 @@ gulp.task("serve", ["js", "jade", "sass"], () => {
     server: `./${config.dest}`,
   });
 
-  gulp.watch(srcGlob("*.html")).on("change", browserSync.reload);
+  gulp.watch(`${config.dest}/*.html`).on("change", browserSync.reload);
   gulp.watch(srcGlob("*.jade"), ["jade"]);
   gulp.watch(srcGlob("*.js"), ["js"]);
   gulp.watch(srcGlob("*.scss"), ["sass"]);
