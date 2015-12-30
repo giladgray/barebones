@@ -70,8 +70,8 @@
     </section>
     <h2 id="buttons" class="section-title">Buttons</h2>
     <section>
-      <pre>&lt;button [disabled] "[large] [primary|secondary|danger|link]">Text&lt;/button>
-&lt;a [disabled] "button [large] [primary|secondary|danger|link]">Text&lt;/a>
+      <pre>&lt;button [disabled] "[primary|secondary|danger|link] [round] [large] [block]">Text&lt;/button>
+&lt;a [disabled] "button [primary|secondary|danger|link] [round] [large] [block]">Text&lt;/a>
 </pre>
       <dl class="horizontal">
         <dt><code></code></dt>
@@ -81,10 +81,6 @@
         <dt><code>disabled</code></dt>
         <dd>
           <button disabled="disabled" class="disabled">Click me!</button><a disabled="disabled" class="button disabled">Click me!</a>
-        </dd>
-        <dt><code>large</code></dt>
-        <dd>
-          <button class="large">Click me!</button><a class="button large">Click me!</a>
         </dd>
         <dt><code>primary</code></dt>
         <dd>
@@ -102,11 +98,23 @@
         <dd>
           <button class="link">Click me!</button><a class="link">Click me!</a>
         </dd>
+        <dt><code>round</code></dt>
+        <dd>
+          <button class="round">Click me!</button><a class="button round">Click me!</a>
+        </dd>
+        <dt><code>large</code></dt>
+        <dd>
+          <button class="large">Click me!</button><a class="button large">Click me!</a>
+        </dd>
+        <dt><code>block</code></dt>
+        <dd>
+          <button class="block">Click me!</button><a class="button block">Click me!</a>
+        </dd>
       </dl>
     </section>
     <h2 id="button-groups" class="section-title">Button Groups</h2>
     <section>
-      <pre>&lt;menu class="[vertical] [block]"&gt;
+      <pre>&lt;menu class="[block] [vertical]"&gt;
   &lt;[button|a] ...>&lt;/[button|a]>
   ...
 &lt;/menu></pre>
@@ -119,17 +127,17 @@
             <button>Red Fish</button><a class="button">Link Fish</a>
           </menu>
         </dd>
-        <dt><code>vertical</code></dt>
+        <dt><code>block</code></dt>
         <dd>
-          <menu class="vertical">
+          <menu class="block">
             <button>One Fish</button>
             <button>Two Fish</button>
             <button>Red Fish</button><a class="button">Link Fish</a>
           </menu>
         </dd>
-        <dt><code>block</code></dt>
+        <dt><code>vertical</code></dt>
         <dd>
-          <menu class="block">
+          <menu class="vertical">
             <button>One Fish</button>
             <button>Two Fish</button>
             <button>Red Fish</button><a class="button">Link Fish</a>
