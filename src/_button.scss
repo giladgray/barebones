@@ -19,20 +19,18 @@
   padding: 9px 15px 7px;
   color: $text-color;
 
-  &:disabled,
-  &.disabled {
+  // using attribute selector so it works for <a> tags too
+  &[disabled] {
     background: darken($button-color, 8%);
     box-shadow: none;
     color: rgba($text-color, 0.5);
   }
 
-  &:hover:not(:disabled),
-  &.hover {
+  &:hover:not([disabled]) {
     background: linear-gradient(to bottom, darken($button-color, 3%), darken($button-color, 8%));
   }
 
-  &:active:not(:disabled),
-  &.active {
+  &:active:not([disabled]) {
     box-shadow: inset border-shadow(0.2), inset drop-shadow(0.2);
     background: linear-gradient(to bottom, darken($button-color, 10%), darken($button-color, 15%));
   }
@@ -52,8 +50,7 @@
     text-decoration: none;
   }
 
-  &:disabled,
-  &.disabled {
+  &[disabled] {
     cursor: not-allowed;
     color: rgba($text-color, 0.4);
   }

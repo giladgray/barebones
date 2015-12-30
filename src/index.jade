@@ -67,12 +67,12 @@ html
     h2#button-groups.section-title Button Groups
     section
       pre.
-        &lt;menu class="[vertical] [block]"&gt;
+        &lt;menu class="[block] [vertical]"&gt;
           &lt;[button|a] ...>&lt;/[button|a]>
           ...
         &lt;/menu>
       dl
-        each mod in ['', 'vertical', 'block']
+        each mod in ['', 'block', 'vertical']
           dt: code= mod
           dd
             menu(class=mod)
